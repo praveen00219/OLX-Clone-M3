@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLX UI Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="color: #082c31">
+    <!-- Header -->
+    <header class="bg-gray-100 w-full shadow-sm py-4">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center space-x-2">
+          <div class="logo">
+            <svg
+              width="48px"
+              height="48px"
+              viewBox="0 0 1024 1024"
+              data-aut-id="icon"
+              class=""
+              fill-rule="evenodd"
+            >
+              <path
+                class="rui-w4DG7"
+                d="M661.333 256v512h-128v-512h128zM277.333 298.667c117.824 0 213.333 95.531 213.333 213.333s-95.509 213.333-213.333 213.333c-117.824 0-213.333-95.531-213.333-213.333s95.509-213.333 213.333-213.333zM794.496 384l37.504 37.504 37.504-37.504h90.496v90.496l-37.504 37.504 37.504 37.504v90.496h-90.496l-37.504-37.504-37.504 37.504h-90.496v-90.496l37.504-37.504-37.504-37.504v-90.496h90.496zM277.333 426.667c-47.061 0-85.333 38.293-85.333 85.333s38.272 85.333 85.333 85.333c47.061 0 85.333-38.293 85.333-85.333s-38.272-85.333-85.333-85.333z"
+              ></path>
+            </svg>
+          </div>
+          <div class="relative">
+            <button
+              class="border border-[#003033] p-2 flex items-center space-x-2"
+            >
+              <span class="text-lg pr-8">India</span>
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 011.414-1.414L10 9.586l3.293-3.293a1 1 0 011.414 1.414l-4 4A1 1 0 0110 12z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Find Cars, Mobile Phones and more..."
+          class="border border-[#003033] p-2 flex-1 ml-4"
+        />
+        <div
+          data-aut-id="btnSearch"
+          class="mr-4 p-2"
+          style="background-color: #003033"
+        >
+          <span>
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 1024 1024"
+              data-aut-id="icon"
+              class=""
+              fill="White"
+              fill-rule="evenodd"
+            >
+              <path
+                class="rui-o3KKi"
+                d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+
+        <div class="mx-2">
+          <button class="p-2 flex items-center space-x-2">
+            <select name="Language" id="" class="text-lg">
+              <option value="" class="pr-3 font-bold">English</option>
+              <option value="" class="font-bold">Hindi</option>
+            </select>
+          </button>
+        </div>
+
+        <button class="text-lg text-[#003033] px-4 py-2 underline font-bold">
+          Login
+        </button>
+
+        <button
+          class="border text-lg text-[#003033] px-4 py-2 rounded-3xl ml-2 font-bold"
+        >
+          + SELL
+        </button>
+      </div>
+    </header>
+
+    <hr />
+
+    <!-- Categories -->
+    <nav class="bg-white py-2 shadow-sm mt-20">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex space-x-4">
+          <div class="relative">
+            <button class="flex items-center space-x-2">
+              <span class="font-semibold">ALL CATEGORIES</span>
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 011.414-1.414L10 9.586l3.293-3.293a1 1 0 011.414 1.414l-4 4A1 1 0 0110 12z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <a href="#" class="hover:text-green-700 font-semibold">Cars</a>
+          <a href="#" class="hover:text-green-700 font-semibold">Motorcycles</a>
+          <a href="#" class="hover:text-green-700 font-semibold"
+            >Mobile Phones</a
+          >
+          <a href="#" class="hover:text-green-700 font-semibold"
+            >For Sale: Houses & Apartments</a
+          >
+          <a href="#" class="hover:text-green-700 font-semibold">Scooters</a>
+          <a href="#" class="hover:text-green-700 font-semibold"
+            >Commercial & Other Vehicles</a
+          >
+          <a href="#" class="hover:text-green-700 font-semibold"
+            >For Rent: Houses & Apartments</a
+          >
+        </div>
+      </div>
+    </nav>
+    <hr />
+
+    <!-- Advertisement -->
+    <section class="container mx-auto mt-4 px-4">
+      <p class="text-center">Advertisement</p>
+      <img src="assets/ad-img.png" alt="Ad" class="mx-auto" />
+    </section>
+
+    <!-- Recommendations -->
+    <section class="xl:max-w-screen-xl mx-auto mt-4 px-4">
+      <h2 class="text-2xl mb-4">Fresh recommendations</h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Item Card -1 -->
+        <div
+          class="bg-white border p-2 p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item1-car.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 31,00,000</div>
+                <div class="text-sm">2017 - 59000.0 km</div>
+                <div class="text-sm mt-2">
+                  Land Rover Discovery Sport TD4 HSE, ...
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -2 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item2-car.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 66,75,000</div>
+                <div class="text-sm">2019 - 35000.0 km</div>
+                <div class="text-sm mt-2">
+                  Mercedese-Benz AMG C 43 4MATIC, 20....
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">Jan 19</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -3 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item3-moblie.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 7,500</div>
+                <div class="text-sm">Vivo v27 5G mobile</div>
+                <div class="text-sm mt-2">RAM 128GB Vivo v27 Mobile ></div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">TODAY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -4 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item4-moblie.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 25,500</div>
+                <div class="text-sm">Selling my 6 months old iPhone 15 ...</div>
+                <div class="text-sm mt-2">Land Discovery ,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -5 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item10-bottle.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 699</div>
+                <div class="text-sm">Steel smart bottle</div>
+                <div class="text-sm mt-2">
+                  Land Rover Discovery Sport TD4 HSE,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, Ajmer</div>
+                  <div class="text-xs text-gray-500">6 Days ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -6 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item6-bike.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,75,000</div>
+                <div class="text-sm">2019 - 1100.0 km</div>
+                <div class="text-sm mt-2">Land Rover Sport Bike TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -7 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item7-watch.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 2,000</div>
+                <div class="text-sm">1 Bds- 1 Ba- 50 ft2</div>
+                <div class="text-sm mt-2">
+                  We have new latest collection ultra, ...
+                </div>
+                <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -8 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item8-land.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 26,00,000</div>
+                <div class="text-sm">Land For Sale</div>
+                <div class="text-sm mt-2">TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">jul 26</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -9 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item9-manWithBoy.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,500</div>
+                <div class="text-sm">RD5 projector 3D 4K wifi smart, ...</div>
+                <div class="text-sm mt-2">Discovery Sport TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -10 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item10-bottle.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,000</div>
+                <div class="text-sm">Steel smart bottle</div>
+                <div class="text-sm mt-2">Discovery TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANDABAD</div>
+                  <div class="text-xs text-gray-500">APR 17</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -11 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item11-watch.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 2,200</div>
+                <div class="text-sm">Calling Smart Watch</div>
+                <div class="text-sm mt-2">iPhone 8series,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">PURAAHMEDABAD</div>
+                  <div class="text-xs text-gray-500">Mar 26</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -12 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item12-projector.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 10,000</div>
+                <div class="text-sm">Projector 2019</div>
+                <div class="text-sm mt-2">RD5 projector Sport TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -13 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item13-wifi.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,000</div>
+                <div class="text-sm">2017 Wifi</div>
+                <div class="text-sm mt-2">Rover Discovery Sport TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -14 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item14-land.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 21,00,000</div>
+                <div class="text-sm">59X45 fts land</div>
+                <div class="text-sm mt-2">
+                  Land Selling Discovery Sport TD4 HSE,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -15 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item15-soft-game.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 15,000</div>
+                <div class="text-sm">2017 Gamming Softwer</div>
+                <div class="text-sm mt-2">Sport Gamming TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -16 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item16-smart-watch.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,300</div>
+                <div class="text-sm">2024 - Latest Watch</div>
+                <div class="text-sm mt-2">
+                  Sport With Calling, Clear Sound HSE,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -17 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item17-gym-tool.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 10,000</div>
+                <div class="text-sm">40Kg Gym Tools</div>
+                <div class="text-sm mt-2">Gym Tools For Sport Person,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -18 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item18-telescope.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 30,000</div>
+                <div class="text-sm">2017 - 59000.0 km Range</div>
+                <div class="text-sm mt-2">TeleScope with clear vision,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -19 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item19-car.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 21,00,000</div>
+                <div class="text-sm">2015 - 59000.0 km</div>
+                <div class="text-sm mt-2">Discovery Sport Car TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, RAj.</div>
+                  <div class="text-xs text-gray-500">Dec 06</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -20 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item20-car.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 26,00,000</div>
+                <div class="text-sm">2019 - 19000.0 km</div>
+                <div class="text-sm mt-2">Sport Car TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">Jodh, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">Feb 20</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -21 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item21-wood.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 16,500</div>
+                <div class="text-sm">20Fts Lond And Hard Wood</div>
+                <div class="text-sm mt-2">
+                  Waterproof Chandan Wood From Kajiranga,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">MH, PUNA</div>
+                  <div class="text-xs text-gray-500">SEP 06</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -22 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item6-bike.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 70,000</div>
+                <div class="text-sm">2017 - 5000.0 km Running</div>
+                <div class="text-sm mt-2">
+                  Land Rover Discovery Sport Bike TD4 HSE,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">AHMEDABAD, Guj.</div>
+                  <div class="text-xs text-gray-500">APR 1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -23 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item12-projector.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute bottom-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded"
+            >
+              FEATURED
+            </div>
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 19,000</div>
+                <div class="text-sm">New Model Projector 2024</div>
+                <div class="text-sm mt-2">
+                  Discovery Sport Projector TD4 HSE,
+                </div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, AHMEDABAD</div>
+                  <div class="text-xs text-gray-500">APR 16</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -24 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item16-smart-watch.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 3,800</div>
+                <div class="text-sm">Latest Banded Smart Watch</div>
+                <div class="text-sm mt-2">bOAT Sport TD4 Watch,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">NARANPURA, HR</div>
+                  <div class="text-xs text-gray-500">Jun 02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -25 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item7-watch.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 1,800</div>
+                <div class="text-sm">2020-21 Smart Watch & Smart Calling</div>
+                <div class="text-sm mt-2">Discovery Watch TD4 HSE,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">Karnu, Delhi</div>
+                  <div class="text-xs text-gray-500">Jan 13</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item Card -26 -->
+        <div
+          class="bg-white p-2 border cursor-pointer shadow-lg rounded-lg overflow-hidden max-w-xs"
+        >
+          <div class="relative">
+            <img
+              src="assets/item9-manWithBoy.jfif"
+              alt="Item Image"
+              class="w-full h-48 object-cover"
+            />
+            <button
+              class="linkeButton absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="unfillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M19.285 12.645a3.8 3.8 0 0 0-5.416-5.332q-.288.288-.732.707l-.823.775l-.823-.775q-.445-.42-.733-.707a3.8 3.8 0 0 0-5.374 0c-1.468 1.469-1.485 3.844-.054 5.32l6.984 6.984l6.97-6.972zm-14.75-6.18a5 5 0 0 1 7.072 0q.273.274.707.682q.432-.408.707-.683a5 5 0 0 1 7.125 7.017l-7.125 7.126a1 1 0 0 1-1.414 0L4.48 13.48a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                class="fillLike"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#f52424"
+                  fill-rule="evenodd"
+                  d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-xl font-bold text-gray-900">₹ 13,200</div>
+                <div class="text-sm">Wifi Included Projector - 2022</div>
+                <div class="text-sm mt-2">Landing Projector,</div>
+                <div class="flex item-center justify-between">
+                  <div class="text-sm text-gray-500">Tel, JK</div>
+                  <div class="text-xs text-gray-500">Aug 6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more items as necessary -->
+      </div>
+    </section>
+
+    <section class="text-center mt-32 mb-60">
+      <button
+        class="border-4 border-green-900 rounded hover:border-green-700 text-lg px-3 py-2 font-bold"
+      >
+        Load More
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer Section -->
+    <footer class="mx-auto">
+      <div class="pt-12 px-4 overflow-hidden sm:px-5 lg:px-6">
+        <div
+          class="flex flex-col justify-between items-center space-y-8 md:space-y-0"
+        >
+          <div
+            class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 items-center"
+          >
+            <div class="flex items-center">
+              <img src="assets/footer-app-img.webp" alt="OLX" class="h-38" />
+            </div>
+
+            <div>
+              <h2 style="color: #082c31" class="text-4xl font-bold">
+                Try the OLX App
+              </h2>
+              <p
+                style="color: #082c31"
+                class="mt-2 max-w-lg text-xl font-semibold"
+              >
+                Buy, sell and find just about anything using the app on your
+                mobile.
+              </p>
+            </div>
+            <div class="mt-4 flex flex-col px-4">
+              <h1 style="color: #082c31" class="text-lg font-bold m-2">
+                GET YOUR APP TODAY
+              </h1>
+              <div class="flex space-x-4">
+                <img
+                  src="assets/footer-appStore.webp"
+                  alt=""
+                  class="w-32 h-16"
+                />
+                <img
+                  src="assets/footerGooglePlay.webp"
+                  alt=""
+                  class="w-32 h-16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-6 bg-gray-100 px-4 overflow-hidden sm:px-5 lg:px-6">
+        <div
+          class="flex px-40 justify-between items-start space-y-8 md:space-y-0"
+        >
+          <!-- Locations and Information -->
+          <div class="space-y-4">
+            <h3
+              style="color: #082c31"
+              class="text-sm font-bold uppercase tracking-wider"
+            >
+              Popular Locations
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Kolkata</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Mumbai</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Chennai</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Pune</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h3
+              style="color: #082c31"
+              class="text-sm font-bold uppercase tracking-wider"
+            >
+              Trending Locations
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Bhubaneshwar</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Hyderabad</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Chandigarh</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Nashik</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h3
+              style="color: #082c31"
+              class="text-sm font-bold uppercase tracking-wider"
+            >
+              About Us
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Tech@OLX</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h3
+              style="color: #082c31"
+              class="text-sm font-bold uppercase tracking-wider"
+            >
+              OLX
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Help</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Sitemap</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Legal & Privacy Information</a
+                >
+              </li>
+              <li>
+                <a href="#" style="color: #082c31" class="hover:text-gray-900"
+                  >Vulnerability Disclosure Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Follow Us Section -->
+          <div class="space-y-2">
+            <h3 style="color: #082c31" class="font-bold">FOLLOW US</h3>
+            <div class="flex space-x-6">
+              <a href="#" class="text-gray-400 hover:text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#035359"
+                    d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225z"
+                  />
+                </svg>
+                <!-- Add Facebook Icon -->
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="#035359"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    color="#035359"
+                  >
+                    <path
+                      d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12"
+                    />
+                    <path
+                      d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m1.008-5.5h-.01"
+                    />
+                  </g>
+                </svg>
+                <!-- Add Instagram Icon -->
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#035359"
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"
+                  />
+                </svg>
+                <!-- Add Twitter Icon -->
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#035359"
+                    d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"
+                  />
+                  <path
+                    fill="#035359"
+                    d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12m11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5a9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5"
+                  />
+                </svg>
+                <!-- Add YouTube Icon -->
+              </a>
+            </div>
+            <div class="mt-8 md:mt-0 flex space-x-4">
+              <img src="assets/footer-appStore.webp" alt="" class="w-24 h-8" />
+              <img src="assets/footerGooglePlay.webp" alt="" class="w-24 h-8" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Logos and Rights Section -->
+      <div
+        style="background-color: #082c31"
+        class="px-44 mt-8 border-t border-gray-200 py-8 flex flex-col lg:flex-row justify-between items-center"
+      >
+        <div
+          class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 items-center"
+        >
+          <img
+            src="assets/footer-cartrade_tech.svg"
+            alt="CarTradeTech Group"
+            class="h-24"
+          />
+          <img src="assets/footer-olx.svg" alt="OLX" class="h-24" />
+          <img src="assets/footer-carwale.svg" alt="CarWale" class="h-24" />
+          <img src="assets/footer-bikewale.svg" alt="BikeWale" class="h-24" />
+          <img src="assets/footer-cartrade.svg" alt="CarTrade" class="h-24" />
+          <img
+            src="assets/footer-mobility.svg"
+            alt="Mobility Outlook"
+            class="h-24"
+          />
+        </div>
+        <div class="mt-8 lg:mt-0 text-center lg:text-right">
+          <p class="">All rights reserved © 2006-2024 OLX</p>
+          <div class="mt-4">
+            <a href="#" class="hover:text-gray-900">Help</a> ·
+            <a href="#" class="hover:text-gray-900">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
